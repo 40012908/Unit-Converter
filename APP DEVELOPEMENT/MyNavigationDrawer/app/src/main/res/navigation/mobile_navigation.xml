@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.lnt.mynavigationdrawer.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_notification"
+            app:destination="@id/notification"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popUpTo="@id/nav_gallery"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_nav_home_to_intent"
+            app:destination="@id/intent" />
+        <action
+            android:id="@+id/action_nav_home_to_internal_Stoarge"
+            app:destination="@id/i_storage" />
+        <action
+            android:id="@+id/action_nav_home_to_external_storage"
+            app:destination="@id/e_storage" />
+        <action
+            android:id="@+id/action_nav_home_to_sharedP2"
+            app:destination="@id/SP" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/notification"
+        android:name="com.lnt.mynavigationdrawer.Notification"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/intent"
+        android:name="com.lnt.mynavigationdrawer.Intent"
+        android:label="fragment_intent"
+        tools:layout="@layout/fragment_intent" />
+    <fragment
+        android:id="@+id/i_storage"
+        android:name="com.lnt.mynavigationdrawer.Internal_Stoarge"
+        android:label="fragment_internal__stoarge"
+        tools:layout="@layout/fragment_internal__stoarge" />
+    <fragment
+        android:id="@+id/e_storage"
+        android:name="com.lnt.mynavigationdrawer.External_storage"
+        android:label="fragment_external_storage"
+        tools:layout="@layout/fragment_external_storage" />
+    <fragment
+        android:id="@+id/SP"
+        android:name="com.lnt.mynavigationdrawer.sharedP"
+        android:label="fragment_shared_p"
+        tools:layout="@layout/fragment_shared_p" />
+</navigation>
